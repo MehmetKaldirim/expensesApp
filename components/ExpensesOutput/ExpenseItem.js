@@ -6,9 +6,13 @@ import { getFormattedDate } from "../../util/date";
 
 function ExpenseItem({ id, description, amount, date }) {
   const navigation = useNavigation();
+
   function expensePressHandler() {
-    navigation.navigate("ManageExpense", { expenseId: id });
+    navigation.navigate("ManageExpense", {
+      expenseId: id,
+    });
   }
+
   return (
     <Pressable
       onPress={expensePressHandler}
@@ -33,7 +37,7 @@ export default ExpenseItem;
 
 const styles = StyleSheet.create({
   pressed: {
-    opacity: 0.5,
+    opacity: 0.75,
   },
   expenseItem: {
     padding: 12,
