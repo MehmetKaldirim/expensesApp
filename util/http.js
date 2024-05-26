@@ -8,8 +8,8 @@ export async function storeExpense(expenseData) {
     BACKEND_URL + "/expenses.json",
     expenseData
   );
-  //const id = response.data.name;
-  //return id;
+  const id = response.data.name;
+  return id;
 }
 
 export async function fetchExpenses() {
