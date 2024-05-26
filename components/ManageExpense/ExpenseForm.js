@@ -27,7 +27,6 @@ function ExpenseForm({ submitButtonLabel, onCancel, onSubmit }) {
       description: inputValues.description,
     };
 
-    console.log("expe date " + expenseData.date);
     onSubmit(expenseData);
   }
 
