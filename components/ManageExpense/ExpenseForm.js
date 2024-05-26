@@ -18,10 +18,6 @@ function ExpenseForm({ submitButtonLabel, onCancel, onSubmit }) {
         [inputIdentifier]: enteredValue,
       };
     });
-    console.log(enteredValue);
-    console.log("date " + enteredValue.date);
-    console.log(enteredValue.amount);
-    console.log(enteredValue.description);
   }
 
   function submitHandler() {
@@ -30,8 +26,8 @@ function ExpenseForm({ submitButtonLabel, onCancel, onSubmit }) {
       date: new Date(inputValues.date),
       description: inputValues.description,
     };
-    console.log("date problem" + inputValues.date);
-    console.log("bu date degil mi" + expenseData.date);
+
+    console.log("expe date " + expenseData.date);
     onSubmit(expenseData);
   }
 
